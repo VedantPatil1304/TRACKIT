@@ -21,7 +21,7 @@ const Contact = () => {
     toast.dismiss();
 
     try {
-      const res = await fetch('http://localhost:5000/api/contact', { // Use full URL during development
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL || ''}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -86,7 +86,7 @@ const Contact = () => {
           </Link>
         </div>
 
-        {/* Right Panel - Contact Form */}
+        {/* Right Panel */}
         <form onSubmit={handleSubmit} className="bg-white p-10 rounded-lg shadow-lg space-y-6">
           <div>
             <label className="block text-gray-700 mb-1 font-medium">Name</label>
@@ -97,7 +97,7 @@ const Contact = () => {
               onChange={handleChange}
               required
               placeholder="Your Name"
-              className="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-gray-900 placeholder-gray-600"
+              className="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-gray-900"
             />
           </div>
           <div>
@@ -109,7 +109,7 @@ const Contact = () => {
               onChange={handleChange}
               required
               placeholder="you@example.com"
-              className="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-gray-900 placeholder-gray-600"
+              className="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-gray-900"
             />
           </div>
           <div>
@@ -121,7 +121,7 @@ const Contact = () => {
               required
               placeholder="Your message..."
               rows={5}
-              className="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-gray-900 placeholder-gray-600"
+              className="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-gray-900"
             ></textarea>
           </div>
           <button
