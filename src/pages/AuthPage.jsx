@@ -107,6 +107,7 @@ const AuthPage = ({ isLogin = true }) => {
               {!isLogin && (
                 <div>
                   <Input
+                    className="text-gray-900"
                     id="name"
                     name="name"
                     type="text"
@@ -123,6 +124,7 @@ const AuthPage = ({ isLogin = true }) => {
               
               <div>
                 <Input
+                  className="text-gray-900"
                   id="email"
                   name="email"
                   type="email"
@@ -138,6 +140,7 @@ const AuthPage = ({ isLogin = true }) => {
               
               <div>
                 <Input
+                  className="text-gray-900"
                   id="password"
                   name="password"
                   type="password"

@@ -58,7 +58,7 @@ const Contact = () => {
           <div className="space-y-6 text-indigo-900">
             <div className="flex items-center space-x-4 text-lg">
               <Mail className="text-indigo-600" />
-              <span>support@trackit.com</span>
+              <span>vedpvt1304@gmail.com</span>
             </div>
             <div className="flex items-center space-x-4 text-lg">
               <Phone className="text-indigo-600" />

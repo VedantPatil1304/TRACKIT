@@ -53,6 +53,7 @@ const TaskForm = ({ initialData, onSubmit, isLoading = false }) => {
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
         <Input
+        className="text-gray-700"
           id="title"
           name="title"
           type="text"
@@ -81,7 +82,7 @@ const TaskForm = ({ initialData, onSubmit, isLoading = false }) => {
             placeholder="Enter task description (optional)"
             value={formData.description}
             onChange={handleChange}
-            className={`block w-full rounded-md shadow-sm pl-10 border-gray-300 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 ${
+            className={`block w-full rounded-md text-gray-700 shadow-sm pl-10 border-gray-300 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 ${
               errors.description ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''
             }`}
           />
@@ -89,9 +90,10 @@ const TaskForm = ({ initialData, onSubmit, isLoading = false }) => {
         {errors.description && <p className="mt-1 text-sm text-red-600">{errors.description}</p>}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-gray-400">
         <div>
           <Select
+            className="text-gray-700"
             id="status"
             name="status"
             label="Status"
@@ -105,8 +107,9 @@ const TaskForm = ({ initialData, onSubmit, isLoading = false }) => {
           />
         </div>
 
-        <div>
+        <div className="text-gray-700">
           <Select
+          className="text-gray-700"
             id="priority"
             name="priority"
             label="Priority"
@@ -122,6 +125,7 @@ const TaskForm = ({ initialData, onSubmit, isLoading = false }) => {
 
         <div>
           <Input
+            className="text-gray-700"
             id="dueDate"
             name="dueDate"
             type="date"

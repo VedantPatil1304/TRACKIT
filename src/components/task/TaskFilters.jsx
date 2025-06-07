@@ -42,10 +42,11 @@ const TaskFilters = ({ filters, onFilterChange }) => {
                 value={localFilters.search || ''}
                 onChange={handleInputChange}
                 leftIcon={<Search size={18} />}
-                className="h-10"
+                className="h-10 text-gray-700"
               />
             </div>
             <Button
+            className='text-gray-600'
               type="button"
               variant="outline"
               onClick={() => setIsExpanded(!isExpanded)}
@@ -64,6 +65,7 @@ const TaskFilters = ({ filters, onFilterChange }) => {
               className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4 pt-4 border-t border-gray-200"
             >
               <Select
+                className=" text-gray-500"
                 id="status"
                 name="status"
                 label="Status"
@@ -78,6 +80,7 @@ const TaskFilters = ({ filters, onFilterChange }) => {
               />
               
               <Select
+                className=" text-gray-500"
                 id="priority"
                 name="priority"
                 label="Priority"
@@ -92,6 +95,7 @@ const TaskFilters = ({ filters, onFilterChange }) => {
               />
               
               <Select
+                className=" text-gray-500"
                 id="sort"
                 name="sort"
                 label="Sort By"
@@ -107,7 +111,7 @@ const TaskFilters = ({ filters, onFilterChange }) => {
                 ]}
               />
               
-              <div className="sm:col-span-3">
+              <div className="sm:col-span-3 text-gray-500">
                 <Button type="button" variant="ghost" onClick={handleReset}>
                   Reset Filters
                 </Button>

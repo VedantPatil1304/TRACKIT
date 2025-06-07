@@ -104,7 +104,7 @@ const DashboardPage = () => {
           </div>
         ) : (
           <>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
               <StatsCard
                 title="Total Tasks"
                 value={stats.total}
@@ -129,7 +129,7 @@ const DashboardPage = () => {
                 icon={<CheckSquare size={24} />}
                 color="green"
               />
-            </div>
+            </div> */}
             
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div className="lg:col-span-2">

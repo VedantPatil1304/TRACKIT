@@ -8,7 +8,7 @@ import authRoutes from './routes/auth.js';
 import taskRoutes from './routes/tasks.js';
 
 import contactRoute from './routes/contact.js';
-
+import userRoutes from './routes/userRoutes.js';
 
 // Load environment variables
 dotenv.config();
@@ -29,6 +29,8 @@ app.use('/api/auth', authRoutes);
 app.use('/api/tasks', taskRoutes);
 
 app.use('/api/contact', contactRoute);
+
+app.use('/api/users', userRoutes);
 
 
 // Serve static assets in production
